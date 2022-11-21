@@ -1,7 +1,4 @@
 .header {
-  @include breakpoint(mobile-max) {
-    padding: 10px 0;
-  }
   background-color: $light-bg;
   border-bottom: 1px solid $header-border-bot-color;
 
@@ -12,5 +9,10 @@
 
   &__logo {
     color: $logo-text-color;
+  }
+  &__contacts {
+    display: flex;
+    margin-left: auto;
+    gap: 30px;
   }
 }

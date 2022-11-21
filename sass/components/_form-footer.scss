@@ -1,48 +1,16 @@
 .form-holder {
-  @include breakpoint(desktop) {
-    margin-left: auto;
-  }
-}
-@include breakpoint(tablet) {
-  .form-holder {
-    display: flex;
-    flex-direction: column;
-  }
+  margin-left: auto;
 }
 
 .form {
-  @media screen and (max-width: 1199px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  @media screen and (min-width: 1200px) {
-    gap: 10px;
-  }
-  @include breakpoint(desktop) {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
   &__input {
-    // @include breakpoint(desktop) {
-    //   display: flex;
-    // }
-    @include breakpoint(tablet-max) {
-      margin-bottom: 20px;
-    }
-
-    // @include breakpoint(tablet-only) {
-    //   max-width: 450px;
-    // }
-    @include breakpoint(desktop) {
-      min-width: 358px;
-    }
     /* margin-right: 12px; */
     padding: 14px 15px;
-    width: 100%;
+    min-width: 358px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
