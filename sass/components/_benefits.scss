@@ -1,23 +1,34 @@
 .benefits {
+  padding: 60px 0;
+
+  @include breakpoint(desktop) {
+    padding: 94px 0 94px 0;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
-    padding: 25px 100px;
+    justify-content: center;
+    padding: 25px 0;
     background: $other-bg;
     border-radius: 4px;
     margin-bottom: 30px;
   }
   &__list {
-    display: flex;
-    gap: 30px;
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $indent;
+    }
   }
-  &__item {
-    max-width: 270px;
-  }
+
   &__title {
     color: $main-text-color;
-
     margin-bottom: 10px;
+    
+    @media screen and (max-width: 767.99px) {
+      text-align: center;
+    }
   }
   &__description {
     font-weight: 400;
@@ -26,5 +37,20 @@
     letter-spacing: 0.03em;
 
     color: $third-text-color;
+  }
+}
+.benefits__item {
+  $items: 2;
+  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+
+  @include breakpoint(desktop) {
+    $items: 4;
+    flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+  }
+
+  &:not(:last-child) {
+    @include breakpoint(mobile-max) {
+      margin-bottom: 30px;
+    }
   }
 }

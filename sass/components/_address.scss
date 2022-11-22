@@ -1,5 +1,7 @@
 .address-holder {
-  width: 231px;
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    flex: 0 0 calc(50% - 30px);
+  }
 }
 .address {
   margin-top: 20px;
@@ -11,7 +13,10 @@
     height: 21px;
   }
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include breakpoint(desktop) {
+      margin-bottom: 9px;
+    }
   }
   &__link {
     font-style: normal;

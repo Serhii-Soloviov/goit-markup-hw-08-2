@@ -19,7 +19,7 @@
       referrerpolicy="no-referrer"
     /> -->
     <!-- <link rel="stylesheet" href="./css/style.css" /> -->
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -28,53 +28,100 @@
         <a class="logo link" href="./index.html"
           >Web<span class="header__logo">Studio</span></a
         >
-        <nav class="navigation header__navigation">
-          <ul class="navigation__list list">
-            <li class="navigation__item">
+        <button
+          type="button"
+          class="mobile-menu__btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mobile-menu__icon"
+            aria-label="Перемикач мобільного меню"
+            width="24"
+            height="16"
+          >
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
+          <button
+            type="button"
+            class="mobile-menu__btn-close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="mobile-menu__icon-close"
+              aria-label="Перемикач мобільного меню"
+              width="19"
+              height="19"
+            >
+              <use href="/images/icons.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+          <nav class="navigation header__navigation">
+            <ul class="navigation__list list">
+              <li class="navigation__item">
+                <a
+                  class="navigation__link link navigation__link--current"
+                  href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link link" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts header__contacts list">
+            <li class="contacts__item">
               <a
-                class="navigation__link link navigation__link--current"
-                href="./index.html"
-                >Студія</a
+                class="contacts__link link contacts__link--size"
+                href="mailto:info@devstudio.com"
+              >
+                <svg class="contacts__icon-mail" width="16" height="12">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link link" href="./portfolio.html"
-                >Портфоліо</a
+            <li class="contacts__item">
+              <a class="contacts__link link" href="tel:+380961111111">
+                <svg class="contacts__icon-phone" width="10" height="16">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a
               >
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link link" href="#">Контакти</a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts header__contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="contacts__social-list list">
+            <li class="contacts__social-item">
+              <a href="#" class="contacts__social-link link">Instagram</a>
+            </li>
+            <li class="contacts__social-item">
+              <a href="#" class="contacts__social-link link">Twitter</a>
+            </li>
+            <li class="contacts__social-item">
+              <a href="#" class="contacts__social-link link">Facebook</a>
+            </li>
+            <li class="contacts__social-item">
+              <a href="#" class="contacts__social-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="main-info">
       <section class="hero">
-        <div class="container">
-          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button hero__button" type="button" data-modal-open>
-            Замовити послугу
-          </button>
-        </div>
+        <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+        <button class="button hero__button" type="button" data-modal-open>
+          Замовити послугу
+        </button>
       </section>
       <section class="benefits section">
         <div class="container">
@@ -166,247 +213,327 @@
       </section>
       <section class="team section">
         <div class="container">
-          <h2 class="suptitle team-suptitle">Наша команда</h2>
+          <h2 class="suptitle team__suptitle">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list__item">
-              <img
-                src="./images/member_img_1.jpg"
-                alt="Усміхнений чоловік в окулярах в коричневій сорочці"
-                width="270"
-                height="260"
-              />
-              <h3 class="team-list__caption">Ігор Дем'яненко</h3>
-              <p class="team-list__profession">Product Designer</p>
-              <ul class="social-icons social-icons--team list">
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/igor-mob.jpg,
+                    ./images/team/igor-mobx2.jpg 2x
+                  "
+                  media="(max-width:767.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/igor-tab.jpg,
+                    ./images/team/igor-tabx2.jpg 2x
+                  "
+                  media="(min-width:768px) and (max-width:1199.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/igor-desk.jpg,
+                    ./images/team/igor-deskx2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/team/igor-mob.jpg" alt="Ігор Дем'яненко" />
+              </picture>
+              <div class="team-list__thumb">
+                <h3 class="team-list__caption">Ігор Дем'яненко</h3>
+                <p class="team-list__profession">Product Designer</p>
+                <ul class="social-icons social-icons--team list">
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/member_img_2.jpg"
-                alt="Усміхнена блондинка в окулярах"
-                width="270"
-                height="260"
-              />
-              <h3 class="team-list__caption">Ольга Рєпіна</h3>
-              <p class="team-list__profession">Frontend Developer</p>
-              <ul class="social-icons social-icons--team  list">
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/olga-mob.jpg,
+                    ./images/team/olga-mobx2.jpg 2x
+                  "
+                  media="(max-width:767.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/olga-tab.jpg,
+                    ./images/team/olga-tabx2.jpg 2x
+                  "
+                  media="(min-width:768px) and (max-width:1199.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/olga-desk.jpg,
+                    ./images/team/olga-deskx2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/team/olga-mob.jpg" alt="Ольга Рєпіна" />
+              </picture>
+              <div class="team-list__thumb">
+                <h3 class="team-list__caption">Ольга Рєпіна</h3>
+                <p class="team-list__profession">Frontend Developer</p>
+                <ul class="social-icons social-icons--team list">
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/member_img_3.jpg"
-                alt="Усміхнений чоловік в світлій сорочці"
-                width="270"
-                height="260"
-              />
-              <h3 class="team-list__caption">Микола Тарасов</h3>
-              <p class="team-list__profession">Marketing</p>
-              <ul class="social-icons social-icons--team  list">
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/kolya-mob.jpg,
+                    ./images/team/kolya-mobx2.jpg 2x
+                  "
+                  media="(max-width:767.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/kolya-tab.jpg,
+                    ./images/team/kolya-tabx2.jpg 2x
+                  "
+                  media="(min-width:768px) and (max-width:1199.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/kolya-desk.jpg,
+                    ./images/team/kolya-deskx2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/team/kolya-mob.jpg" alt="Микола Тарасов" />
+              </picture>
+              <div class="team-list__thumb">
+                <h3 class="team-list__caption">Микола Тарасов</h3>
+                <p class="team-list__profession">Marketing</p>
+                <ul class="social-icons social-icons--team list">
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/member_img_4.jpg"
-                alt="Чоловік в окулярах в темній футболці"
-                width="270"
-                height="260"
-              />
-              <h3 class="team-list__caption">Михайло Єрмаков</h3>
-              <p class="team-list__profession">UI Designer</p>
-              <ul class="social-icons social-icons--team  list">
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-icons__item">
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icons__link social-icons__link--team"
-                  >
-                    <svg class="social-icons__logo" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/misha-mob.jpg,
+                    ./images/team/misha-mobx2.jpg 2x
+                  "
+                  media="(max-width:767.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/misha-tab.jpg,
+                    ./images/team/misha-tabx2.jpg 2x
+                  "
+                  media="(min-width:768px) and (max-width:1199.99px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/misha-desk.jpg,
+                    ./images/team/misha-deskx2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/team/misha-mob.jpg" alt="Михайло Єрмаков" />
+              </picture>
+              <div class="team-list__thumb">
+                <h3 class="team-list__caption">Михайло Єрмаков</h3>
+                <p class="team-list__profession">UI Designer</p>
+                <ul class="social-icons social-icons--team list">
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-icons__item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-icons__link social-icons__link--team"
+                    >
+                      <svg class="social-icons__logo" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -522,7 +649,9 @@
           </address>
         </div>
         <div class="network-holder">
-          <h3 class="subtitle subtitle--footer network-holder__title">приєднуйтесь</h3>
+          <h3 class="subtitle subtitle--footer network-holder__title">
+            приєднуйтесь
+          </h3>
           <ul class="social-icons list">
             <li class="social-icons__item">
               <a
@@ -575,7 +704,9 @@
           </ul>
         </div>
         <div class="form-holder">
-          <h3 class="subtitle subtitle--footer form-holder__title">Підпишіться на розсилку</h3>
+          <h3 class="subtitle subtitle--footer form-holder__title">
+            Підпишіться на розсилку
+          </h3>
           <form class="form" name="subscibe">
             <input
               class="form__input"
@@ -620,7 +751,9 @@
               </svg>
             </div>
             <div class="wrapper-inputs__name">
-              <label for="phone_number" class="wrapper-inputs__label">Телефон</label>
+              <label for="phone_number" class="wrapper-inputs__label"
+                >Телефон</label
+              >
               <input
                 type="tel"
                 name="phone_number"
@@ -644,7 +777,9 @@
               </svg>
             </div>
             <div class="wraper-inputs__name">
-              <label for="comment" class="wrapper-inputs__label">Коментар</label>
+              <label for="comment" class="wrapper-inputs__label"
+                >Коментар</label
+              >
               <textarea
                 name="comment"
                 id="comment"
@@ -672,9 +807,12 @@
             </label>
           </div>
         </form>
-        <button type="submit" class="button modal-form__button">Відправити</button>
+        <button type="submit" class="button modal-form__button">
+          Відправити
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
